@@ -25,7 +25,7 @@ olcRootDN: cn=Manager,dc=example,dc=com<br>
 <br>
 dn: olcDatabase={2}hdb,cn=config<br>
 changetype: modify<br>
-add: olcRootPW<br>
+replace: olcRootPW<br>
 olcRootPW: {SSHA}PASSWORD<br>
 <br>
 dn: olcDatabase={2}hdb,cn=config<br>
