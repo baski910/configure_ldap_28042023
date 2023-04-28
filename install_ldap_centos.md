@@ -33,6 +33,9 @@ changetype: modify<br>
 add: olcAccess<br>
 olcAccess: {0}to attrs=userPassword,shadowLastChange by
   dn="cn=Manager,dc=example,dc=com" write by anonymous auth by self write by * none<br>
+  
+execute the following command to add the ldapdomain.ldif to server<br>
+ldapmodify -Y EXTERNAL -H ldapi:/// -f ldapdomain.ldif<br>
 olcAccess: {1}to dn.base="" by * read<br>
 olcAccess: {2}to * by dn="cn=Manager,dc=example,dc=com" write by * read<br>
 
