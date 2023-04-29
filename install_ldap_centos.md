@@ -11,7 +11,7 @@ dn: olcDatabase={1}monitor,cn=config<br>
 changetype: modify<br>
 replace: olcAccess<br>
 olcAccess: {0}to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth"
-nbspnbspread by dn.base="cn=Manager,dc=example,dc=com" read by * none<br>
+   read by dn.base="cn=Manager,dc=example,dc=com" read by * none<br>
 <br>
 dn: olcDatabase={2}hdb,cn=config<br>
 changetype: modify<br>
@@ -32,10 +32,10 @@ dn: olcDatabase={2}hdb,cn=config<br>
 changetype: modify<br>
 add: olcAccess<br>
 olcAccess: {0}to dn.base=""<br>
-&nbsp&nbspby * read<br>
+  by * read<br>
 olcAccess: {1}to *<br>
-nbspnbspby dn="cn=Manager,dc=example,dc=com" write<br>
-nbspnbspby * read<br>
+  by dn="cn=Manager,dc=example,dc=com" write<br>
+  by * read<br>
 <br>
 <br>
 execute the following command to add the ldapdomain.ldif to server<br>
